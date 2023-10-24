@@ -55,10 +55,42 @@ formElement.addEventListener("submit", (event) => {
   theMarketPlace();
 });
 
-let url = `https://majazocom.github.io/Data/pokemons.json`;
-function fetchPokemonDAta(adress) {
-  fetch(adress)
-    .then((response) => response.json())
-    .then((data) => console.log(data));
+// let url = `https://majazocom.github.io/Data/pokemons.json`;
+// function fetchPokemonDAta(adress) {
+//   fetch(adress)
+//     .then((response) => response.json())
+//     .then((data) => console.log(data));
+// }
+// console.log(fetchPokemonDAta(url));
+
+async function EpicGames() {
+  const outputEpicGames = document.querySelector(`#outputApiEpicGames`);
+  const url = "https://free-epic-games.p.rapidapi.com/free";
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "e72c78f677msh5ec16d84062e2e7p1c67d2jsn45aadf8bfa32",
+      "X-RapidAPI-Host": "free-epic-games.p.rapidapi.com",
+    },
+  };
+
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+
+    let gamesList = ``;
+    if (result.freeGames && result.freeGames.current) {
+      result.freeGames.current.forEach((game) => {
+        gamesList += `<li>${game.title}</li>`;
+      });
+      outputEpicGames.innerHTML = `<ul>${gamesList}</ul>`;
+    } else {
+      outputEpicGames.innerHTML = `Unexpected data format`;
+    }
+  } catch (error) {
+    console.error(error);
+    outputEpicGames.innerHTML = `Failed to fetch`;
+  }
 }
-console.log(fetchPokemonDAta(url));
+
+EpicGames();

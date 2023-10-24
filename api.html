@@ -12,7 +12,7 @@
 
 <body>
     <header class="main-header">
-        <img class="mainLogo" src="./images/loga.png" alt="logo"> <!--logo on the left side-->
+        <img class="mainLogo" src="./img/ny-looga.svg" alt="logo" href="./index.html"> <!--logo on the left side-->
 
         <menu class="menu-container">
             <button class="menu-button" onclick="toggleMenu()">Menu</button>
@@ -21,37 +21,51 @@
                 <a href="#">About</a>
                 <a href="#">Contact Me</a>
                 <a href="#">Game</a>
-                <a href="/api.html">API's</a>
+                <a href="./api.html">API's</a>
             </div>
         </menu>
     </header>
 
     <main>
-        <article>
-            <h3>All API's to have fun</h3>
-            <ul>
-                <form id="stockForm">
-                    <input type="text" id="api-calls" placeholder="Enter stock name...">
-                    <button type="submit">Search</button>
-                </form>
-                <div id="outputAPI"></div>
-
-
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+        <article class="slide-left">
+            <div id="outputApiEpicGames"></div>
         </article>
+
+        <div class="middle-container">
+            <div>
+                <h3>All API's to have fun</h3>
+                <div class="stockFormContainer">
+                    <form id="stockForm">
+                        <input type="text" id="api-calls" placeholder="Enter stock name...">
+                        <button type="submit">Search</button>
+                    </form>
+                    <div id="outputAPI"></div>
+                </div>
+
+                <div>
+                    <form id="">
+                        <input type="text" id="api-calls" placeholder="Enter stock name...">
+                        <button type="submit">Search</button>
+                    </form>
+                    <div id="outputApi1"></div>
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <div class="reklam">
+
+            </div>
+        </div>
 
     </main>
     <footer class="footer-container">
         <ul class="footer-container-left">
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact me</li>
-            <li>Games</li>
+            <li> <a href="./index.html">Home</a></li>
+            <li><a href="./contactMe.html">Contact me</a></li>
+            <li><a href="./About.html">About</a></li>
+            <li><a href="./game.html">Games</a></li>
+            <li><a href="./api.html">Api's</a></li>
         </ul>
         <ul class="footer-container-right">
             <li>hang-man</li>
