@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="./Css/style.css">
-    <script type="text/javascript" src="./JS/script.js"></script>
+    <script type="text/javascript" src="./JS/script.js" defer></script>
 
 </head>
 
 <body>
     <header class="main-header">
-        <img class="mainLogo" src="./images/loga.png" alt="logo" href="./index.html"> <!--logo on the left side-->
+        <img class="mainLogo" src="./images/loga.png" alt="logo"> <!--logo on the left side-->
 
         <menu class="menu-container">
             <button class="menu-button" onclick="toggleMenu()">Menu</button>
@@ -21,28 +21,29 @@
                 <a href="#">About</a>
                 <a href="#">Contact Me</a>
                 <a href="#">Game</a>
-                <a href="./api.html">API's</a>
+                <a href="/api.html">API's</a>
             </div>
         </menu>
     </header>
 
     <main>
-        <article class="slide-left">
+        <article>
+            <h3>All API's to have fun</h3>
+            <ul>
+                <form id="stockForm">
+                    <input type="text" id="api-calls" placeholder="Enter stock name...">
+                    <button type="submit">Search</button>
+                </form>
+                <div id="outputAPI"></div>
 
+
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </article>
-
-        <div class="middle-conteiner">
-            <div>
-                <p>helow
-
-                </p>
-            </div>
-        </div>
-        <div>
-            <div class="reklam">
-
-            </div>
-        </div>
 
     </main>
     <footer class="footer-container">
